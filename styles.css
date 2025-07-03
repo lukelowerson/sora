@@ -1,0 +1,153 @@
+:root {
+  --primary-font: "Inter", Sans-serif;
+  --secondary-font: "Outfit", Sans-serif;
+  --tertiary-font: "Manrope", Sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: var(--tertiary-font);
+  color: #111;
+  padding: 1rem 2rem;
+  background: #eaeaea;
+  cursor: default;
+}
+/* Mountain Background Image */
+.background {
+  background-image: url("Assets/mountain.jpg");
+  position: fixed;
+  background-size: 140%; /* change to cover & remove 0.1% to revert to default zoom */
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.6;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+/* NavBar*/
+.navbar {
+  font-family: var(--secondary-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: 800;
+}
+/* Sora Logo */
+.logo {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #a3d2c2, #92d4f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Sora Logo Cloud */
+.logo i {
+  margin-right: 0.5rem;
+  font-size: 1.7rem;
+}
+/* Active Users Badge*/
+.badge {
+  background: white;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  line-height: 1;
+}
+/* Heading, Subheading & Buttons */
+main.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+}
+
+/* Hero Heading(s) */
+.hero h1 {
+  font-weight: 800;
+  font-size: 3rem;
+}
+/* Hero Subheading */
+.hero p {
+  font-family: var(--tertiary-font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 1.7rem;
+  margin-bottom: -1.7rem;
+}
+/* Sign up & Download Button */
+.buttons {
+  font-size: 1.4rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 2rem;
+  margin: 0.8rem;
+  cursor: pointer;
+  background: #ffffff8e;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+/* Buttons on hover */
+.buttons:hover {
+  transform: scale(1.05);
+}
+/* Button Clouds */
+.buttons i {
+  margin-left: 0.3rem;
+  background: linear-gradient(45deg, #a3d2c2, #92d4f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.272));
+}
+/* Both Buttons */
+.button-group {
+  display: flex;
+  margin-top: 3rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .background {
+    background-size: cover;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+    margin-top: -1rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .hero p {
+    font-size: 0.6rem;
+  }
+
+  .buttons {
+    margin-top: -0.3rem;
+    font-size: 0.5rem;
+    background: #e6dbdb;
+  }
+
+  .buttons i {
+    display: none;
+  }
+}
