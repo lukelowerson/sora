@@ -23,14 +23,14 @@ body {
   font-family: var(--tertiary-font);
   color: #111;
   padding: 1rem 2rem;
-  background: #eaeaea;
+  background: #c4c4c0;
   cursor: default;
 }
 /* Mountain Background Image */
 .background {
   background-image: url("Assets/mountain.jpg");
   position: fixed;
-  background-size: 140%; /* change to cover & remove 0.1% to revert to default zoom */
+  background-size: 135%; /* change to cover & remove 0.1% to revert to default zoom */
   background-position: center 0%;
   background-repeat: no-repeat;
   z-index: -1;
@@ -57,6 +57,11 @@ body {
   background: linear-gradient(45deg, #a3d2c2, #92d4f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
 }
 /* Sora Logo Cloud */
 .logo i {
@@ -72,26 +77,33 @@ body {
   border-radius: 1rem;
   line-height: 1;
 }
+
+.badge i {
+  font-size: 1.25rem;
+  margin-left: 0.3rem;
+}
 /* Heading, Subheading & Buttons */
 main.hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 4rem;
+  align-items: center;
+  padding: 3rem;
 }
 
 /* Hero Heading(s) */
 .hero h1 {
+  color: #1c1c1e;
   font-weight: 800;
   font-size: 3rem;
+  filter: drop-shadow(2px 2px 1.3px rgba(0, 0, 0, 0.245));
 }
 /* Hero Subheading */
 .hero p {
   font-family: var(--tertiary-font);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 1.7rem;
   margin-bottom: -1.7rem;
 }
@@ -99,13 +111,15 @@ main.hero {
 .buttons {
   font-size: 1.4rem;
   padding: 0.7rem 1.3rem;
+  border-width: 3px;
+  border-style: solid;
   border-radius: 2rem;
   margin: 0.8rem;
   cursor: pointer;
-  background: #ffffff8e;
   font-family: var(--secondary-font);
   font-weight: 600;
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
 /* Buttons on hover */
 .buttons:hover {
@@ -117,7 +131,19 @@ main.hero {
   background: linear-gradient(45deg, #a3d2c2, #92d4f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.272));
+  filter: drop-shadow(2px 2px 1.3px rgba(0, 0, 0, 0.522));
+}
+
+#download {
+  color: white;
+  background-color: #1c1c1e;
+  border: 3px solid #c8c8de;
+}
+
+#sign-up {
+  color: #1c1c1e;
+  background-color: #d2cbcb;
+  border: 3px solid #1c1c1e;
 }
 /* Both Buttons */
 .button-group {
