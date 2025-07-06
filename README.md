@@ -1,4 +1,6 @@
-# Sora ☁️
+# Sora ☁️ - Cloud Based Storage Solutions
+
+[Live Sora Demo](https://sora-project.netlify.app/)
 
 **Safety. Security. Storage.**
 
